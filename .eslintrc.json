@@ -29,6 +29,7 @@
     "prettier"
   ],
   "rules": {
+    "@typescript-eslint/interface-name-prefix": "off",
     "react/require-default-props": "off",
     "react/no-danger": "off",
     "jsx-a11y/anchor-is-valid": "off",

@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
-export const Title = styled.h1`
-  color: #8782e5;
+interface SidebarProps {
+  isOpen: boolean;
+}
+
+export const Container = styled.div`
+  width: 100%;
 `;
