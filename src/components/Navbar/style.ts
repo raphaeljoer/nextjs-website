@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface INavbar {
   fixedNavBar: boolean;
@@ -15,7 +15,7 @@ export const Nav = styled.nav<INavbar>`
     }
   }
 
-  position: static;
+  position: absolute;
   transition: all 0.2s ease-out;
 
   ${({ fixedNavBar }) =>
@@ -33,9 +33,9 @@ export const Nav = styled.nav<INavbar>`
   justify-content: center;
 
   width: 100%;
-  backdrop-filter: blur(6px);
+  backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.6);
-  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09);
 `;
 
 export const NavbarContainer = styled.div`

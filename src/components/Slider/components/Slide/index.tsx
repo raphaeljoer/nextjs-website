@@ -49,7 +49,12 @@ const Slide = ({ slideContent, setContent }: ISlideContentObj) => {
             <FiArrowRightCircle size={56} />
           </ButtonArrow>
         </Controls>
-        <ImageNext src={slideContent.image} key={slideContent.image} unsized />
+        <ImageNext
+          src={slideContent.image}
+          key={slideContent.image}
+          quality={40}
+          unsized
+        />
       </ImageContainer>
     </SlideContent>
   );

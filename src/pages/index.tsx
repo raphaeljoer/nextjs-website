@@ -4,6 +4,7 @@ import { Container } from '@/styles/pages/Home';
 import SidebarModal from '@/components/SidebarModal';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import HeroSlider from '@/components/HeroSlider';
 import Highlights from '@/components/Highlights';
 import Slider from '@/components/Slider';
 
@@ -18,6 +19,7 @@ export default function Home() {
     <Container>
       <SidebarModal isOpen={modalOpen} setIsOpen={toggleModal} />
       <Navbar setIsOpen={toggleModal} />
+      <HeroSlider />
       <Hero
         title="Realize your full potential"
         subTitle="We help our clients make realize their most important business goals."

@@ -14,6 +14,10 @@ export const Container = styled.div`
   height: 100%;
 
   margin-top: 4rem;
+
+  @media screen and (max-width: 1000px) {
+    margin-top: 0;
+  }
 `;
 
 export const HeroContent = styled.div<IHeroProps>`
