@@ -160,7 +160,7 @@ export const Controls = styled.div`
   align-items: center;
 
   height: 100px;
-  width: 15%;
+  width: auto;
 
   padding: 2rem;
 
@@ -181,4 +181,34 @@ export const ControlSlideNext = styled.button`
   color: white;
   opacity: 0.6;
   background: none;
+`;
+
+export const ControlNavSliderContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 20px;
+  width: 100%;
+
+  min-width: 100px;
+`;
+
+export const ControlNavSliderItem = styled.button<ISlideProps>`
+  margin: 0 0.4rem;
+
+  height: 15px;
+  width: 15px;
+
+  border-radius: 50%;
+  border: white solid 2px;
+
+  ${(props) =>
+    props.isActive
+      ? css`
+          background: black;
+        `
+      : css`
+          background: transparent;
+        `}
 `;

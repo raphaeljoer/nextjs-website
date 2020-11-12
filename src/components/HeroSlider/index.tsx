@@ -14,6 +14,8 @@ import {
   Controls,
   ControlSlidePrevious,
   ControlSlideNext,
+  ControlNavSliderContainer,
+  ControlNavSliderItem,
 } from './styles';
 
 const HeroSlider = () => {
@@ -91,10 +93,20 @@ const HeroSlider = () => {
     <Container>
       {slideContent.map((slide, index) => (
         <SlideContainer isActive={isActive[index]} key={slide.title}>
-          <Controls onClick={() => handleSlidePrevious(index)}>
-            <ControlSlidePrevious>
+          <Controls>
+            <ControlSlidePrevious onClick={() => handleSlidePrevious(index)}>
               <FiArrowLeftCircle size={54} />
             </ControlSlidePrevious>
+
+            <ControlNavSliderContainer>
+              {slideContent.map((slideNav, indexNav) => (
+                <ControlNavSliderItem
+                  isActive={isActive[indexNav]}
+                  onClick={() => handleMountActiveSchema(indexNav)}
+                />
+              ))}
+            </ControlNavSliderContainer>
+
             <ControlSlideNext onClick={() => handleSlideNext(index)}>
               <FiArrowRightCircle size={54} />
             </ControlSlideNext>
